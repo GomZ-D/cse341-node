@@ -1,0 +1,9 @@
+# ---Test the SERVER 
+GET http://localhost:3000
+# --Test ALL USERS
+GET http://localhost:3000/users
+# ---Render ALL USERS---
+GET https://cse341-project1-r5c7.onrender.com/users
+# ---Render SINGLE USER
+GET https://cse341-project1-r5c7.onrender.com/users/63bf6aec45f9246318f5f64c
+
