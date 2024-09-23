@@ -1,7 +1,7 @@
 {
   "name": "cse341-project1",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/GomZ-D/cse341-project1/issues"
   },
-  "homepage": "https://github.com/GomZ-D/cse341-project1#readme"
+  "homepage": "https://github.com/GomZ-D/cse341-project1#readme",
+  "dependencies": {
+    "express": "^4.21.0"
+  }
 }
