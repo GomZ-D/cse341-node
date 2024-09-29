@@ -1,0 +1,40 @@
+# ---Test the SERVER 
+GET http://localhost:3000
+### --Test ALL USERS
+GET http://localhost:3000/users
+### ---Render ALL USERS---
+GET https://cse341-project1-r5c7.onrender.com/users
+### ---Render SINGLE USER
+GET https://cse341-project1-r5c7.onrender.com/users/63bf6aec45f9246318f5f64c
+
+# --------Week 2 Test--------- 
+
+### --- CREATE USER
+POST http://localhost:3000/users HTTP/1.1 
+Content-Type: application/json
+
+{
+    "firstName": "Tomas", 
+    "lastName": "Shipillman", 
+    "email": "tomas@gmail.com", 
+    "favoriteColor": "red", 
+    "birthday": "09/15/2000"
+}
+
+###  --- UPDATE USER
+PUT http://localhost:3000/users/63bf6aec45f9246318f5f64d HTTP/1.1 
+content-type: application/json
+
+{
+  "firstName": "jamie", 
+  "lastName": "Clanton", 
+  "email": "jamie@gmail.com", 
+  "favoriteColor": "pink", 
+  "birthday": "04/15/1992"
+}
+
+### --- DELETE USER
+DELETE http://localhost:3000/users/66f8eeba5d9f79571857cba9 HTTP/1.1
+ 
+
+ 
