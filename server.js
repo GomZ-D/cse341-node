@@ -7,8 +7,19 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
-app.use('/', require('./routes'));
 
+app.use((req, res, next) => {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader(
+        'Access-Control-Allow-Headers',
+        'Origin, X-Requested-With, Content-Type, Accept, Z-key'
+    );
+    // res.setHeader('Content-Type', 'application/json');
+    res.setHeader('Accesss-Control-Allow-Method', 'GET, POST, PUT, DELETE, OPTIONS');
+    next();
+  })
+
+  app.use('/', require('./routes'));
 
 mongodb.initDb ((error)=> {
     if(error) {

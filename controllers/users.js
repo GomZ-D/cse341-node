@@ -8,6 +8,7 @@ const ObjectId = require('mongodb').ObjectId;
 //--FUNCTION TO GET ALL THE COLLECTION
 //-------------------------------------
 const getAll = async (req, res, next) => {
+   //swagger.tags=['User']
     try{
       const result = await mongodb.getDatabase().db().collection('users').find();
       result.toArray().then((lists) => {
@@ -24,6 +25,7 @@ const getAll = async (req, res, next) => {
   //------------------------------------
   
   const getSingle = async (req, res, next) => {
+    //swagger.tags=['User']
     try{
       const userId = new ObjectId(req.params.id);
       const result = await mongodb
@@ -45,6 +47,7 @@ const getAll = async (req, res, next) => {
 //------------------------------------
 
  const createUser = async(req,res) => {
+  //swagger.tags=['User']
   const user = {
     firstName: req.body.firstName,
     lastName: req.body.lastName,
@@ -71,6 +74,7 @@ const getAll = async (req, res, next) => {
 //------------------------------------
 
 const updateUser = async (req, res) => {
+  //swagger.tags=['User']
  const userId = new ObjectId(req.params.id);
 
  const user = {
@@ -99,6 +103,7 @@ const updateUser = async (req, res) => {
 //------------------------------------
 
 const deleteUser = async (req, res) => {
+  //swagger.tags=['User']
   const userId = new ObjectId(req.params.id);
 
   const result = mongodb
