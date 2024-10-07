@@ -29,12 +29,12 @@ content-type: application/json
   "firstName": "jamie", 
   "lastName": "Clanton", 
   "email": "jamie@gmail.com", 
-  "favoriteColor": "pink", 
+  "favoriteColor": "blue", 
   "birthday": "04/15/1992"
 }
 
 ### --- DELETE USER
-DELETE http://localhost:3000/users/66f8eeba5d9f79571857cba9 HTTP/1.1
+DELETE http://localhost:3000/users/67044a9ea3ceed7be806b8c6 HTTP/1.1
  
 
  

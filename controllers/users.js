@@ -102,11 +102,11 @@ const updateUser = async (req, res) => {
 //--FUNCTION TO DELETE A USER
 //------------------------------------
 
-const deleteUser = async (req, res) => {
+const deleteUser = async (req,res) => {
   //swagger.tags=['User']
   const userId = new ObjectId(req.params.id);
 
-  const result = mongodb
+  const result = await mongodb
   .getDatabase()
   .db()
   .collection('users')
